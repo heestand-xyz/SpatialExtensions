@@ -18,5 +18,6 @@ import SpatialExtensions
 ```swift
 let contentSize = Size3D(width: 200, height: 50, depth: 50)
 let containerSize = Size3D(width: 100, height: 100, depth: 100)
-XCTAssertEqual(conentSize.place(in: containerSize, placement: .fit), Size3D(width: 100, height: 25, depth: 25))
+XCTAssertEqual(conentSize.place(in: containerSize, placement: .fit),
+               Size3D(width: 100, height: 25, depth: 25))
 ```
