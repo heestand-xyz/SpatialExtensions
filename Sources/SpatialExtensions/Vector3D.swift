@@ -16,3 +16,17 @@ public extension SIMD3<Float> {
         Vector3D(self)
     }
 }
+
+public extension Point3D {
+    
+    var vector3D: Vector3D {
+        Vector3D(self)
+    }
+}
+
+public extension Size3D {
+    
+    var vector3D: Vector3D {
+        Vector3D(self)
+    }
+}
