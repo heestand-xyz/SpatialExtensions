@@ -12,9 +12,9 @@ public struct Angle3D: Codable, Equatable, Hashable {
     
     public static let zero = Angle3D(x: .zero, y: .zero, z: .zero)
     
-    public let x: Angle2D
-    public let y: Angle2D
-    public let z: Angle2D
+    public var x: Angle2D
+    public var y: Angle2D
+    public var z: Angle2D
     
     public var xRotation: Rotation3D {
         Rotation3D(angle: x, axis: .x)
