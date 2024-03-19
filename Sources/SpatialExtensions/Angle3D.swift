@@ -33,4 +33,10 @@ public struct Angle3D: Codable, Equatable, Hashable {
         self.y = y
         self.z = z
     }
+    
+    public static func angle(x: Angle, y: Angle, z: Angle) -> Angle3D {
+        self.init(x: Angle2D(radians: x.radians),
+                  y: Angle2D(radians: y.radians),
+                  z: Angle2D(radians: z.radians))
+    }
 }
