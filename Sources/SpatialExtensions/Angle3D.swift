@@ -28,13 +28,25 @@ public struct Angle3D: Codable, Equatable, Hashable {
         Rotation3D(angle: z, axis: .z)
     }
     
-    public init(x: Angle2D, y: Angle2D, z: Angle2D) {
+    public var xAngle: Angle {
+        .radians(x.radians)
+    }
+    
+    public var yAngle: Angle {
+        .radians(y.radians)
+    }
+    
+    public var zAngle: Angle {
+        .radians(z.radians)
+    }
+    
+    public init(x: Angle2D = .zero, y: Angle2D = .zero, z: Angle2D = .zero) {
         self.x = x
         self.y = y
         self.z = z
     }
     
-    public static func angle(x: Angle, y: Angle, z: Angle) -> Angle3D {
+    public static func angles(x: Angle = .zero, y: Angle = .zero, z: Angle = .zero) -> Angle3D {
         self.init(x: Angle2D(radians: x.radians),
                   y: Angle2D(radians: y.radians),
                   z: Angle2D(radians: z.radians))
