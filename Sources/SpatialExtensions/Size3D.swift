@@ -22,3 +22,12 @@ public extension Vector3D {
         Size3D(self)
     }
 }
+
+public extension Size3D {
+    
+    static func / (lhs: Size3D, rhs: Size3D) -> Size3D {
+        Size3D(width: lhs.width / rhs.width,
+               height: lhs.height / rhs.height,
+               depth: lhs.depth / rhs.depth)
+    }
+}
