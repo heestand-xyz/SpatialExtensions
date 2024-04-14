@@ -2,7 +2,7 @@
 //  File.swift
 //  
 //
-//  Created by Heestand, Anton Norman | Anton | GSSD on 2024-03-19.
+//  Created by Anton Heestand on 2024-03-19.
 //
 
 import SwiftUI
