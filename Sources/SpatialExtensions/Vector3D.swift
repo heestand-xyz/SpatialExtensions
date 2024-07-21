@@ -30,3 +30,54 @@ public extension Size3D {
         Vector3D(self)
     }
 }
+
+public extension Vector3D {
+    
+    static func + (lhs: Vector3D, rhs: Size3D) -> Vector3D {
+        Vector3D(x: lhs.x + rhs.width,
+                 y: lhs.y + rhs.height,
+                 z: lhs.z + rhs.depth)
+    }
+    
+    static func += (lhs: inout Vector3D, rhs: Size3D) {
+        lhs = Vector3D(x: lhs.x + rhs.width,
+                       y: lhs.y + rhs.height,
+                       z: lhs.z + rhs.depth)
+    }
+    
+    static func - (lhs: Vector3D, rhs: Size3D) -> Vector3D {
+        Vector3D(x: lhs.x - rhs.width,
+                 y: lhs.y - rhs.height,
+                 z: lhs.z - rhs.depth)
+    }
+    
+    static func -= (lhs: inout Vector3D, rhs: Size3D) {
+        lhs = Vector3D(x: lhs.x - rhs.width,
+                       y: lhs.y - rhs.height,
+                       z: lhs.z - rhs.depth)
+    }
+    
+    static func * (lhs: Vector3D, rhs: Size3D) -> Vector3D {
+        Vector3D(x: lhs.x * rhs.width,
+                 y: lhs.y * rhs.height,
+                 z: lhs.z * rhs.depth)
+    }
+    
+    static func *= (lhs: inout Vector3D, rhs: Size3D) {
+        lhs = Vector3D(x: lhs.x * rhs.width,
+                       y: lhs.y * rhs.height,
+                       z: lhs.z * rhs.depth)
+    }
+    
+    static func / (lhs: Vector3D, rhs: Size3D) -> Vector3D {
+        Vector3D(x: lhs.x / rhs.width,
+                 y: lhs.y / rhs.height,
+                 z: lhs.z / rhs.depth)
+    }
+    
+    static func /= (lhs: inout Vector3D, rhs: Size3D) {
+        lhs = Vector3D(x: lhs.x / rhs.width,
+                       y: lhs.y / rhs.height,
+                       z: lhs.z / rhs.depth)
+    }
+}
