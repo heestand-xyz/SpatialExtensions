@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Angle3D.swift
 //  
 //
 //  Created by Anton Heestand on 2024-03-19.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Spatial
 
-public struct Angle3D: Codable, Equatable, Hashable {
+public struct Angle3D: Codable, Equatable, Hashable, Sendable {
     
     public static let zero = Angle3D(x: .zero, y: .zero, z: .zero)
     
