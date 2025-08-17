@@ -31,6 +31,24 @@ public extension Vector3D {
     }
 }
 
+public func min(_ lhs: Point3D, _ rhs: Point3D) -> Point3D {
+    Point3D(x: min(lhs.x, rhs.x),
+            y: min(lhs.y, rhs.y),
+            y: min(lhs.z, rhs.z))
+}
+
+public func max(_ lhs: Point3D, _ rhs: Point3D) -> Point3D {
+    Point3D(x: max(lhs.x, rhs.x),
+            y: max(lhs.y, rhs.y),
+            y: max(lhs.z, rhs.z))
+}
+
+public func abs(_ point: Point3D) -> Point3D {
+    Point3D(x: abs(point.x),
+            y: abs(point.y),
+            y: abs(point.z))
+}
+
 public extension Point3D {
     
     static func + (lhs: Point3D, rhs: Point3D) -> Point3D {
