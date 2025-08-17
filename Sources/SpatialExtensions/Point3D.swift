@@ -46,7 +46,7 @@ public func max(_ lhs: Point3D, _ rhs: Point3D) -> Point3D {
 public func abs(_ point: Point3D) -> Point3D {
     Point3D(x: abs(point.x),
             y: abs(point.y),
-            y: abs(point.z))
+            z: abs(point.z))
 }
 
 public extension Point3D {
