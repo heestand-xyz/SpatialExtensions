@@ -29,15 +29,30 @@ public struct Angle3D: Codable, Equatable, Hashable, Sendable {
     }
     
     public var xAngle: Angle {
-        .radians(x.radians)
+        get {
+            .radians(x.radians)
+        }
+        set {
+            x = Angle2D(radians: newValue.radians)
+        }
     }
     
     public var yAngle: Angle {
-        .radians(y.radians)
+        get {
+            .radians(y.radians)
+        }
+        set {
+            y = Angle2D(radians: newValue.radians)
+        }
     }
     
     public var zAngle: Angle {
-        .radians(z.radians)
+        get {
+            .radians(z.radians)
+        }
+        set {
+            z = Angle2D(radians: newValue.radians)
+        }
     }
     
     public init(x: Angle2D = .zero, y: Angle2D = .zero, z: Angle2D = .zero) {
