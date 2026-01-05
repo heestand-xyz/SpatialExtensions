@@ -1,5 +1,12 @@
 import Spatial
 import simd
+import CoreGraphics
+
+extension Point3D {
+    public var in2D: CGPoint {
+        CGPoint(x: x, y: y)
+    }
+}
 
 public extension Point3D {
     

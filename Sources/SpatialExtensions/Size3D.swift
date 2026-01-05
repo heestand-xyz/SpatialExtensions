@@ -1,4 +1,11 @@
 import Spatial
+import CoreGraphics
+
+extension Size3D {
+    public var in2D: CGSize {
+        CGSize(width: width, height: height)
+    }
+}
 
 public extension Size3D {
     

@@ -1,5 +1,12 @@
 import Spatial
 import simd
+import CoreGraphics
+
+extension Vector3D {
+    public var in2D: CGVector {
+        CGVector(dx: x, dy: y)
+    }
+}
 
 public extension Vector3D {
     
