@@ -10,6 +10,17 @@ extension Point3D {
 
 public extension Point3D {
     
+    var asSize: Size3D {
+        Size3D(width: x, height: y, depth: z)
+    }
+    
+    var asVector: Vector3D {
+        Vector3D(x: x, y: y, z: z)
+    }
+}
+
+public extension Point3D {
+    
     var simd3: SIMD3<Float> {
         SIMD3<Float>(x: Float(x),
                      y: Float(y),
