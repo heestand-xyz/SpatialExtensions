@@ -161,3 +161,14 @@ public extension Point3D {
 //                z: lhs.z / rhs)
 //    }
 }
+
+
+extension Point3D {
+    
+    public func transform(
+        by matrix: float4x4
+    ) -> Point3D {
+        let transform = matrix * SIMD4<Float>(simd3, 1)
+        return Point3D(x: transform.x, y: transform.y, z: transform.z)
+    }
+}
