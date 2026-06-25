@@ -26,6 +26,16 @@ public extension Size3D {
                      z: Float(depth))
     }
 }
+public extension SIMD3<Float> {
+    
+    var asSize: Size3D {
+        Size3D(
+            width: Double(x),
+            height: Double(y),
+            depth: Double(z)
+        )
+    }
+}
 
 public extension Point3D {
     
@@ -39,6 +49,12 @@ public extension Vector3D {
     var size3D: Size3D {
         Size3D(self)
     }
+}
+
+public func abs(_ size: Size3D) -> Size3D {
+    Size3D(width: abs(size.width),
+           height: abs(size.height),
+           depth: abs(size.depth))
 }
 
 public extension Size3D {

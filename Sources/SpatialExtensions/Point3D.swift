@@ -30,6 +30,17 @@ public extension Point3D {
 
 public extension SIMD3<Float> {
     
+    var asPoint: Point3D {
+        Point3D(
+            x: Double(x),
+            y: Double(y),
+            z: Double(z)
+        )
+    }
+}
+
+public extension SIMD3<Float> {
+    
     var point3D: Point3D {
         Point3D(self)
     }

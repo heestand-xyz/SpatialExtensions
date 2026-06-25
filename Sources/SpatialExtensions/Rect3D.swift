@@ -79,3 +79,20 @@ public extension Rect3D {
         )
     }
 }
+
+public extension Rect3D {
+    
+    static func * (lhs: Rect3D, rhs: Double) -> Rect3D {
+        Rect3D(
+            origin: lhs.origin * rhs,
+            size: lhs.size * rhs
+        )
+    }
+    
+    static func / (lhs: Rect3D, rhs: Double) -> Rect3D {
+        Rect3D(
+            origin: lhs.origin / rhs,
+            size: lhs.size / rhs
+        )
+    }
+}
